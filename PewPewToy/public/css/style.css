@@ -256,6 +256,7 @@ button {
 
 .custom_menu li a {
     color: #f1f1f1;
+    font-weight: bold;
 }
 
 .custom_menu li a:hover {
@@ -955,3 +956,4 @@ input.mail_bt::placeholder {
 
 
 /* copyright section end */
+
