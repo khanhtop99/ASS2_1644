@@ -571,7 +571,7 @@ a:hover {
 }
 
 .box_main {
-    width: 100%;
+    width: 100%;        
     background-color: #ffffff;
     height: auto;
     padding: 20px;
@@ -600,7 +600,7 @@ a:hover {
     width: 100%;
     text-align: center;
     margin: 50px 0px;
-    min-height: 370px;
+    min-height: 200px;
 }
 
 .btn_main {

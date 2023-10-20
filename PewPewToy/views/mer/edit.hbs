@@ -1,0 +1,13 @@
+
+<h1>Edit Mercedes</h1>
+<form action="/mer/edit/{{mer._id}}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required value="{{mer.name}}">
+    
+    <label for="price">Price:</label>
+    <input type="number" name="price" id="price" required value="{{mer.price}}">
+    
+    <label for="image">Image URL:</label>
+    <input type="text" name="image" id="image" required value="{{mer.image}}">
+    <input type="submit" class="btn btn-primary" value="Edit">
+</form>

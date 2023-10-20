@@ -1,0 +1,20 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Add Data Form</title>
+    </head>
+    <body>
+        <h1>Add Data</h1>
+        <form action="/bmw/edit/{{bmw._id}}" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required value="{{bmw.name}}">
+            
+            <label for="price">Price:</label>
+            <input type="number" name="price" id="price" required value="{{bmw.price}}">
+            
+            <label for="image">Image URL:</label>
+            <input type="text" name="image" id="image" required value="{{bmw.image}}">
+            <input type="submit" class="btn btn-primary" value="Edit">
+        </form>
+    </body>
+    </html>

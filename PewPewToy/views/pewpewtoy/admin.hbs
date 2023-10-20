@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        /* Thêm CSS để tạo kiểu cho bảng và các nút */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <h1><a href="/pewpewtoy">HOME</a></h1>
+    <tr>
+       <a href="/bmw/admin"><th>BMW</th></a>
+       <a href="/mer/admin"><th>MERCEDES</th></a>
+        <th>MG</th>
+    </tr>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each bmw}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>${{price}}</td>
+                    <td><img src="{{image}}" alt="{{name}}"height="219px" width="475px"></td>
+                </tr>
+            {{/each}}
+        </tbody>
+          <tbody>
+            {{#each mer}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>${{price}}</td>
+                    <td><img src="{{image}}" alt="{{name}}"height="219px" width="475px"></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

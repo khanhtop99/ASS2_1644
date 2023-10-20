@@ -181,7 +181,7 @@
     }
     .tshirt_img {
         margin: 20px 0px;
-        min-height: 320px;
+        height: 10px;
     }
     .banner_taital {
         font-size: 50px;
