@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-let pewpewtoySchema = mongoose.Schema(
+let MgSchema = mongoose.Schema(
     {
         name: {
             type:String,
@@ -17,7 +17,5 @@ let pewpewtoySchema = mongoose.Schema(
         }
     }
 );
-
-var CarsModel = mongoose.model('car', pewpewtoySchema, 'car');
-
-module.exports = CarsModel;
+var MgModel = mongoose.model('mg', MgSchema, 'mg');
+module.exports = MgModel;

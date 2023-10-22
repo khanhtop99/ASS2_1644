@@ -24,49 +24,32 @@
     </style>
 </head>
 <body>
-    <h1>Dashboard</h1>
-    <h1><a href="/pewpewtoy">HOME</a></h1>
-    <tr>
-       <a href="/bmw/admin"><th>BMW</th></a>
-       <a href="/mer/admin"><th>MERCEDES</th></a>
-       <a href="/mg/admin"><th>MG</th></a>
-    </tr>
+    <h1>Admin MG</h1>
+    <h3><a href="/pewpewtoy/admin">BACK TO DASHBOARD</a></h3>
     <table>
         <thead>
             <tr>
                 <th>Name</th>
                 <th>Price</th>
                 <th>Image</th>
+                <th>Actions</th>
             </tr>
         </thead>
-        <tbody>
-            {{#each bmw}}
-                <tr>
-                    <td>{{name}}</td>
-                    <td>${{price}}</td>
-                    <td><img src="{{image}}" alt="{{name}}"height="219px" width="475px"></td>
-                </tr>
-            {{/each}}
-        </tbody>
-          <tbody>
-            {{#each mer}}
-                <tr>
-                    <td>{{name}}</td>
-                    <td>${{price}}</td>
-                    <td><img src="{{image}}" alt="{{name}}"height="219px" width="475px"></td>
-                </tr>
-            {{/each}}
-        </tbody>
         <tbody>
             {{#each mg}}
                 <tr>
                     <td>{{name}}</td>
                     <td>${{price}}</td>
-                    <td><img src="{{image}}" alt="{{name}}"height="219px" width="475px"></td>
+                    <td><img src="{{image}}" alt="{{name}}" height="219px" width="475px"></td>
+                    <td>
+                         <a href="/mg/edit/{{_id}}"><input type="submit" value="Edit" class="btn btn-primary"></a> 
+                        <a href="/mg/delete/{{_id}}" class="btn btn-danger" onclick="return confirm ('Are you sure?');">Delete</a>
+                    </td>
                 </tr>
             {{/each}}
         </tbody>
-
     </table>
+   <a href="/mg/add"><button type="submit">Add New Toy</button></a> 
+   
 </body>
 </html>

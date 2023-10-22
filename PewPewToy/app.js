@@ -10,6 +10,7 @@ var pewpewtoyRouter = require('./routes/pewpewtoy');
 var loginRouter = require('./routes/login');
 var bmwRouter = require('./routes/bmw');
 var merRouter = require('./routes/mer');
+var mgRouter = require('./routes/mg');
 
 var mongoose = require("mongoose");
 var uri = "mongodb+srv://khanhnngch210946:khanh1234@cluster0.5lwimzj.mongodb.net/pewpewtoy";
@@ -38,6 +39,7 @@ app.use('/pewpewtoy', pewpewtoyRouter);
 app.use('/login', loginRouter);
 app.use('/bmw', bmwRouter);
 app.use('/mer', merRouter);
+app.use('/mg', mgRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

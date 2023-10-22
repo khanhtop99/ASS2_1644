@@ -50,7 +50,7 @@
                            <li><a href="/pewpewtoy/admin">Admin</a></li>
                            <li><a href="/bmw">BMW</a></li>
                            <li><a href="/mer">Mercedes</a></li>
-                           <li><a href="#">Customer Service</a></li>
+                           <li><a href="/mg">MG</a></li>
                         </ul>
                      </div>
                   </div>
@@ -78,16 +78,16 @@
                      <a href="/pewpewtoy">Home</a>
                      <a href="/bmw">BMW</a>
                      <a href="/mer">Mercedes</a>
-                     <a href="jewellery.html">MG</a>
+                     <a href="/mg">MG</a>
                   </div>
                   <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
                   <div class="dropdown">
                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Category 
                      </button>
                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">BMW</a>
-                        <a class="dropdown-item" href="#">Mercedes</a>
-                        <a class="dropdown-item" href="#">MG</a>
+                        <a class="dropdown-item" href="/bmw">BMW</a>
+                        <a class="dropdown-item" href="/mer">Mercedes</a>
+                        <a class="dropdown-item" href="/mg">MG</a>
                      </div>
                   </div>
                   <div class="main">
@@ -212,12 +212,12 @@
                      <h1 class="fashion_taital">Mercedes</h1>
                      <div class="fashion_section_2">
                         <div class="row">
-                            {{#each bmw }}
-                           <div class="col-lg-3 col-sm-3">
+                           {{#each mer }}
+                              <div class="col-lg-3 col-sm-3">
                               <div class="box_main">
-                                 <h4 class="shirt_text">Laptop</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
-                                 <div class="electronic_img"><img src="images/laptop-img.png"></div>
+                                 <h4 class="shirt_text">{{ name }}</h4>
+                                 <p class="price_text">{{ price }}  <span style="color: #262626;">$</span></p>
+                               <a href="/mer/detail/{{_id}}">  <div class="tshirt_img"><img src="{{image}}"></div></a>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -225,6 +225,7 @@
                               </div>
                            </div>
                            {{/each}}
+                           
                         </div>
                      </div>
                   </div>
@@ -239,20 +240,23 @@
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
-                     <h1 class="fashion_taital">MG-3</h1>
+                     <h1 class="fashion_taital">MG</h1>
                      <div class="fashion_section_2">
                         <div class="row">
-                           <div class="col-lg-4 col-sm-4">
+                           {{#each mg }}
+                              <div class="col-lg-3 col-sm-3">
                               <div class="box_main">
-                                 <h4 class="shirt_text">Jumkas</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
-                                 <div class="jewellery_img"><img src="images/jhumka-img.png"></div>
+                                 <h4 class="shirt_text">{{ name }}</h4>
+                                 <p class="price_text">{{ price }}  <span style="color: #262626;">$</span></p>
+                               <a href="/mg/detail/{{_id}}">  <div class="tshirt_img"><img src="{{image}}"></div></a>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
                                  </div>
                               </div>
                            </div>
+                           {{/each}}
+                           
                         </div>
                      </div>
                   </div>
