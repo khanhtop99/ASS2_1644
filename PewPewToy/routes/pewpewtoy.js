@@ -24,9 +24,13 @@ router.get('/cart', (req, res) => {
 router.get('/list', async(req, res) => {
   var bmw = req.body;
   var mer = req.body;
+  var mg  = req.body;
+
   bmw = await BmwModel.find();
   mer = await MerModel.find();
-  res.render('pewpewtoy/list', { bmw: bmw , mer: mer });
+  mg  = await MgModel.find();
+
+  res.render('pewpewtoy/list', { bmw: bmw , mer: mer , mg: mg });
 })
 
 
