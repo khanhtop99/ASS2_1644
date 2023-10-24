@@ -2,6 +2,7 @@ var express = require('express');
 const BmwModel = require('../models/BmwModel');
 const MerModel = require('../models/MerModel');
 const MgModel = require('../models/MgModel');
+const CarsModel = require('../models/CarModel');
 // const UserModel = require('../models/UserModel');
 var router = express.Router();
 
@@ -33,6 +34,13 @@ router.get('/list', async(req, res) => {
   res.render('pewpewtoy/list', { bmw: bmw , mer: mer , mg: mg });
 })
 
+router.post('/search', async(req, res) =>{
+  var keyword = req.body.name;
+  var mer = await MerModel.find({ name: new RegExp(keyword, "i") });
+  var bmw = await BmwModel.find({ name: new RegExp(keyword, "i") });
+  var mg = await MgModel.find({ name: new RegExp(keyword, "i") });
+  res.render('pewpewtoy/index', {mer:mer, bmw:bmw, mg:mg});
+})
 
 // show data of bmw in admin
 router.get('/admin', async (req, res) => {
